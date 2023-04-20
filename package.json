@@ -1,0 +1,24 @@
+{
+  "name": "Dallas-Hindu-Priest",
+  "version": "1.0.0",
+  "description": "Hindu priest service style",
+  "main": "index.js",
+  "scripts": {
+   "compile:sass": "sass --watch scss/custom:css"
+  },
+  "keywords": [
+    "Bootstrap",
+    "bootstrap-v5",
+    "sass",
+    "learn-bootstrap",
+    "learn-sass"
+  ],
+  "author": "Ajit Sahu",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.32.12"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  }
+}
