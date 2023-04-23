@@ -114,6 +114,99 @@
             }
         }
     });
+
+    /*** Contact US Form */
+    $(document).ready(function() {
+        // Select the form element
+        var form = $('#contactUs');
+      
+        // Handle form submission
+        form.submit(function(event) {
+          // Prevent the default form submission behavior
+          event.preventDefault();
+      
+          // Select form fields
+          var name = $('#name');
+          var email = $('#email');
+          var phone = $('#phone');
+          var subject = $('#subject');
+      
+          // Check if fields are empty
+          if (name.val() === '') {
+            name.after('<span class="error-message">Please enter your name</span>');
+            return;
+          }
+      
+          if (email.val() === '') {
+            email.after('<span class="error-message">Please enter your email</span>');
+            return;
+          }
+      
+          if (phone.val() === '') {
+            phone.after('<span class="error-message">Please enter your phone number</span>');
+            return;
+          }
+      
+          if (subject.val() === '') {
+            subject.after('<span class="error-message">Please enter a subject</span>');
+            return;
+          }
+      
+          // Check if Name format is valid
+          var nameRegex = /^[a-zA-Z ]+$/;
+          if (!nameRegex.test(email.val())) {
+            console.log('Please enter a valid email address');
+            return;
+          }
+         
+      
+          // Check if email format is valid
+          var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+          if (!emailRegex.test(name.val())) {
+            console.log('Please enter a valid Name without number');
+            return;
+          }
+        
+          // Check if phone format is valid
+          var phoneRegex = /^(\+1)?[\s-]?\(?([0-9]{3})\)?[\s-]?([0-9]{3})[\s-]?([0-9]{4})$/;
+          if (!phoneRegex.test(phone.val())) {
+            console.log('Please enter a valid phone number');
+            return;
+          }
+      
+          // Serialize the form data
+          var formData = form.serialize();
+      
+          // Submit the form via AJAX
+          
+           $.ajax({
+            url: $(form).attr("action"),
+            type: $(form).attr("method"),
+            data: $(form).serialize(),
+            dataType: 'json',
+            accepts: 'application/json',
+            success: function(response) {
+                setTimeout(function() {
+                    window.location.href = "https://dallashindupriest.com/success.html";
+                }, 200);
+                form[0].reset();
+             
+              // Handle successful submission
+            },
+            error: function(xhr, status, error) {
+               alert('There was an error submitting the form: ' + error);
+              // Handle submission error
+            }
+          });
+            
+        });
+      });
+      
+      // Year for copy right
+      var currentYear= new Date().getFullYear(); 
+      document.getElementById("year").innerHTML = currentYear;
+
+
     
 })(jQuery);
 

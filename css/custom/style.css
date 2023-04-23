@@ -405,6 +405,12 @@
   border-color: var(--primary);
 }
 
+.testimonial-item p {
+  height: 120px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
 /*** Footer ***/
 .footer .btn.btn-social {
   margin-right: 5px;

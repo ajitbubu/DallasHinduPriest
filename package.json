@@ -4,7 +4,7 @@
   "description": "Hindu priest service style",
   "main": "index.js",
   "scripts": {
-   "compile:sass": "sass --watch scss/custom:css"
+   "compile:sass": "sass --watch scss/custom:css/custom"
   },
   "keywords": [
     "Bootstrap",
