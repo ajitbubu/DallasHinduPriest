@@ -133,37 +133,37 @@
       
           // Check if fields are empty
           if (name.val() === '') {
-            name.after('<span class="error-message">Please enter your name</span>');
+            name.after('<span class="error-message text-danger">Please enter your name</span>');
             return;
           }
       
           if (email.val() === '') {
-            email.after('<span class="error-message">Please enter your email</span>');
+            email.after('<span class="error-message text-danger">Please enter your email</span>');
             return;
           }
       
           if (phone.val() === '') {
-            phone.after('<span class="error-message">Please enter your phone number</span>');
+            phone.after('<span class="error-message text-danger">Please enter your phone number</span>');
             return;
           }
       
           if (subject.val() === '') {
-            subject.after('<span class="error-message">Please enter a subject</span>');
+            subject.after('<span class="error-message text-danger">Please enter a subject</span>');
             return;
           }
       
           // Check if Name format is valid
-          var nameRegex = /^[a-zA-Z ]+$/;
-          if (!nameRegex.test(email.val())) {
-            console.log('Please enter a valid email address');
+          var nameRegex = /^[A-Za-z\s]+$/;
+          if (!nameRegex.test(name.val())) {
+            console.log('Please enter a valid Name without number');
             return;
           }
          
-      
+         
           // Check if email format is valid
           var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-          if (!emailRegex.test(name.val())) {
-            console.log('Please enter a valid Name without number');
+          if (!emailRegex.test(email.val())) {
+            console.log('Please enter a valid email address');
             return;
           }
         
