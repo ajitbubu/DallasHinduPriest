@@ -206,7 +206,14 @@
       var currentYear= new Date().getFullYear(); 
       document.getElementById("year").innerHTML = currentYear;
 
+      // Initialize Fancybox
+        $(document).ready(function() {
+            $("[data-fancybox='gallery']").fancybox({
+            buttons: ["zoom", "slideShow", "fullScreen", "thumbs", "close"]
+            });
+        });
 
-    
+
+       
 })(jQuery);
 
