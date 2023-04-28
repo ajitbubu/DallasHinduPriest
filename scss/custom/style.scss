@@ -108,8 +108,14 @@ body {
 }
 
 .navbar-dark .navbar-brand img {
-    width: 300px;
+    width: 260px;
     transition: .5s;
+    @media only screen and (min-width: 400px) {
+        
+          width: 300px;
+        
+      }
+   
 }
 
 .sticky-top.navbar-dark .navbar-brand img {
@@ -154,11 +160,7 @@ body {
 }
 
 .brand-logo {
-    h2 {
-        line-height: inherit;
-        font-size: 3rem;
-    }
-
+   
     span {
         background-image: url(../../img/logo/text-logo.svg);
         display: block;
@@ -166,6 +168,8 @@ body {
         min-width: 265px;
         background-repeat: no-repeat;
     }
+   
+   
 }
 
 /*** Hero Header ***/

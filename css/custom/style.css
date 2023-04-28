@@ -105,8 +105,13 @@ body {
 }
 
 .navbar-dark .navbar-brand img {
-  width: 300px;
+  width: 260px;
   transition: 0.5s;
+}
+@media only screen and (min-width: 400px) {
+  .navbar-dark .navbar-brand img {
+    width: 300px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -136,10 +141,6 @@ body {
     position: fixed;
     background: var(--dark) !important;
   }
-}
-.brand-logo h2 {
-  line-height: inherit;
-  font-size: 3rem;
 }
 .brand-logo span {
   background-image: url(../../img/logo/text-logo.svg);
