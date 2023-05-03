@@ -1,0 +1,9 @@
+
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.dallashindupriest.com/sitemap.xml
+Sitemap: https://dallashindupriest.com/sitemap.xml
