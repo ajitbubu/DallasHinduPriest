@@ -4,7 +4,7 @@
   "description": "Hindu priest service style",
   "main": "index.js",
   "scripts": {
-   "compile:sass": "sass --watch scss/custom:css/custom"
+    "compile:sass": "sass --watch scss/custom:css/custom"
   },
   "keywords": [
     "Bootstrap",
@@ -19,6 +19,7 @@
     "sass": "^1.32.12"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "uglify-js": "^3.17.4"
   }
 }

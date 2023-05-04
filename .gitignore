@@ -8,3 +8,5 @@ node_modules
 package-lock.json
 yarn.lock
 netlify
+img/.DS_Store
+.DS_Store
