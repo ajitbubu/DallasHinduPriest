@@ -10,3 +10,4 @@ yarn.lock
 netlify
 img/.DS_Store
 .DS_Store
+.cache
